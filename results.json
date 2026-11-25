@@ -1,0 +1,78 @@
+{
+  "dataset": "lava5675/Fake-Reviews-Dataset",
+  "dataset_revision": "00f829e21be152e4d5969c0a24b9302cf61cc8bd",
+  "seed": 42,
+  "preparation": {
+    "source_rows": 40526,
+    "empty_text_rows_excluded": 1,
+    "conflicting_label_rows_excluded": 0,
+    "duplicate_rows_excluded": 44,
+    "unique_reviews_kept": 40481
+  },
+  "splits": {
+    "train": {
+      "rows": 24288,
+      "original": 12138,
+      "computer_generated": 12150
+    },
+    "validation": {
+      "rows": 8096,
+      "original": 4046,
+      "computer_generated": 4050
+    },
+    "test": {
+      "rows": 8097,
+      "original": 4047,
+      "computer_generated": 4050
+    }
+  },
+  "label_order": [
+    "original",
+    "computer_generated"
+  ],
+  "validation": {
+    "multinomial_nb": {
+      "accuracy": 0.8402915019762845,
+      "precision": 0.8127978216473791,
+      "recall": 0.8844444444444445,
+      "f1": 0.8471089038666194,
+      "roc_auc": 0.9263822827605988,
+      "average_precision": 0.9297949298141467
+    },
+    "gradient_boosting": {
+      "accuracy": 0.7805088932806324,
+      "precision": 0.8235126672359806,
+      "recall": 0.714320987654321,
+      "f1": 0.7650403279122041,
+      "roc_auc": 0.8648239993165021,
+      "average_precision": 0.8773551327682458
+    },
+    "logistic_regression": {
+      "accuracy": 0.8591897233201581,
+      "precision": 0.8679817905918058,
+      "recall": 0.8474074074074074,
+      "f1": 0.8575712143928036,
+      "roc_auc": 0.9348211005535112,
+      "average_precision": 0.9378861173831071
+    }
+  },
+  "selected_by_validation_f1": "logistic_regression",
+  "test": {
+    "accuracy": 0.8587131036186242,
+    "precision": 0.8612630532073595,
+    "recall": 0.8553086419753086,
+    "f1": 0.8582755203171457,
+    "roc_auc": 0.9308252416818434,
+    "average_precision": 0.9328386554585778
+  },
+  "test_confusion_matrix": [
+    [
+      3489,
+      558
+    ],
+    [
+      586,
+      3464
+    ]
+  ]
+}
